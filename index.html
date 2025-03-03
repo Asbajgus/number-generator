@@ -7,20 +7,24 @@
 </head>
 <body>
     <div id="numberGenerator"></div>
+    <div id="numberGenerator2"></div>
     <script>
         let number = 0;
+        let number2 = 0;
        
         setInterval(() => {
-            number = Math.floor(Math.random() * 100);
+            number = Math.floor(Math.random() * 10);
             document.getElementById("numberGenerator").innerHTML = number;
 
-
-            if (number > 90) {
+            number2 = Math.floor(Math.random() * 10);
+            document.getElementById("numberGenerator2").innerHTML = number2;
+            
+            if (number == number2) {
                 setTimeout(() => {
-                alert("Number is over 90");
+                alert("nummer mactcher");
                 }, 100);
             }
-                }, 1000);
+                }, 1000)
             
        </script>
    
